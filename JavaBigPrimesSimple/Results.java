@@ -9,8 +9,29 @@ public class Results {
         primes = new TreeSet<>();
     }
 
-    public SortedSet<BigInteger> getPrimes(){
-        return primes;
+    //Not thread safe
+//    public SortedSet<BigInteger> getPrimes(){
+//        return primes;
+//    }
+
+    //Thread safe
+
+    public int getSize(){
+        synchronized (this) {
+            return primes.size();
+        }
+    }
+
+    public void addPrime(BigInteger prime){
+        synchronized (this){
+            primes.add(prime);
+        }
+    }
+
+    public void print(){
+        synchronized (this){
+            primes.forEach(System.out::print);
+        }
     }
 
 }
