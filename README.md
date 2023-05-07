@@ -34,3 +34,49 @@ Since each actor has its own thread and its own state, there is no sharing of da
 ## Conclusion
 
 The actor model provides a powerful tool for addressing the challenges of concurrent programming. By ensuring that each actor has its own thread and its own state, and that messages are immutable, the actor model eliminates many of the issues related to thread safety and concurrent access.
+
+
+
+# Akka
+
+Akka is an open-source toolkit and runtime for building highly concurrent, distributed, and fault-tolerant systems.
+
+## APIs
+
+Akka provides two types of APIs:
+
+### Classic API
+
+The Classic API is the original API that has been used in Akka since its first release. It's based on the actor model and provides a set of primitives for building actor-based systems. The Classic API is based on mutable state and shared memory, which can make it more challenging to reason about concurrency and make it harder to write correct and scalable applications.
+
+### Typed API
+
+The Typed API is a newer API that was introduced in Akka 2.6. It provides a type-safe and functional API that makes it easier to reason about concurrency and write correct and scalable applications. The Typed API is based on immutable state and message passing, which makes it easier to write concurrent code that is easy to reason about and understand. The Typed API also provides a set of higher-level abstractions, such as Akka Persistence, that make it easier to build more complex systems.
+
+In summary, Akka provides two types of APIs, Classic and Typed, which are based on the actor model and provide abstractions for building actor-based systems. The Typed API is a newer and more modern API that provides a type-safe and functional API that makes it easier to reason about concurrency and write correct and scalable applications.
+
+
+```xml
+<dependency>
+    <groupId>com.typesafe.akka</groupId>
+    <artifactId>akka-actor-typed_**2.13**</artifactId> <!--Scala version-->
+    <version>2.6.3</version><!--AKKA Version -->
+</dependency>
+<dependency>
+    <groupId>com.typesafe.akka</groupId>
+    <artifactId>akka-actor-testkit-typed_**2.13**</artifactId>
+    <version>2.6.3</version>
+</dependency>
+
+```
+
+```xml
+<!-- logging-->
+<dependency>
+  <groupId>ch.qos.logback</groupId>
+  <artifactId>logback-classic</artifactId>
+  <version>1.2.3</version>
+</dependency>
+
+```
+
