@@ -12,6 +12,6 @@ public class PrimeGenerator implements Runnable{
     public void run() {
         // Creating random number from 0 to 2^2000 - 1
         BigInteger bigInteger = new BigInteger(2000, new Random());
-        results.getPrimes().add(bigInteger.nextProbablePrime());
+        results.addPrime((bigInteger.nextProbablePrime()));
     }
 }
