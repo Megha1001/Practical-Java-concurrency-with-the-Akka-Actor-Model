@@ -24,7 +24,8 @@ In the actor model, messages must be immutable, which means that they cannot be 
 
 ## Example: Getting the Next Probable Prime Number
 
-To demonstrate the actor model in action, consider the problem of getting the next probable prime number. The following diagram illustrates the actor model for this problem:
+To demonstrate the actor model in action, consider the problem of getting the next probable prime number. 
+
 
 In this model, the `PrimeNumberActor` receives a message containing a number. It then calculates the next probable prime number and sends it to the `PrinterActor`, which prints the number to the console.
 
